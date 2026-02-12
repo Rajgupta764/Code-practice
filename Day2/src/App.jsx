@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import ProductCard from './ProductCard'
 import Footer from './Footer'
 import Counter from './Counter'
+import Controlinput from './Controlinput'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       {/* <ProductCard/>
       <Footer/> */}
       <Counter/>
+      <Controlinput/>
     </div>
   )
 }
