@@ -4,6 +4,8 @@ import ProductCard from './ProductCard'
 import Footer from './Footer'
 import Counter from './Counter'
 import Controlinput from './Controlinput'
+import Todolist from './Todolist'
+import List from './List'
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
       <Footer/> */}
       <Counter/>
       <Controlinput/>
+      <Todolist/>
+      <List/>
     </div>
   )
 }
