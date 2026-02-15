@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
-import Login from './Login'
-import Logout from './Logout'
+import Register from './components/Register';
+import Login from './components/Login';
 
 const App = () => {
 
-  const [isLogedin,setIsLogedin]=useState(false)
+  const [isLogein,setLogedin]=useState(false);
 
- const handleclick=()=>{
-  setIsLogedin(!isLogedin)
- }
+  const handleclick=()=>{
+    setLogedin(!isLogein);
+  }
 
   return (
     <div>
+      <button onClick={handleclick}>{isLogein?<Register/>:<Login/>}</button>
       
-
-      <button onClick={handleclick}>{isLogedin?<Logout/>:<Login/>}</button>
     </div>
   )
 }
