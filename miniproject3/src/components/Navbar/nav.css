@@ -1,0 +1,71 @@
+.nav-container{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--nav-border);
+    box-shadow: 0 12px 30px rgba(19, 32, 35, 0.12), 0 2px 0 rgba(242, 161, 84, 0.35);
+}
+
+.name h1{
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    color: var(--text);
+    position: relative;
+    padding-right: 10px;
+}
+
+.name h1::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    box-shadow: 0 0 10px rgba(242, 161, 84, 0.45);
+}
+
+.contents{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    
+}
+
+
+.contents a{
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.98rem;
+    color: var(--text);
+    transition: 0.2s ease;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.contents a:hover{
+    color: var(--accent);
+    background: var(--nav-link-bg);
+    border-color: var(--border-strong);
+}
+
+.contents a:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (max-width: 720px){
+    .nav-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

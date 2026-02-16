@@ -1,0 +1,66 @@
+.lang-card{
+  width: min(520px, 94vw);
+  padding: 30px;
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 24px 50px rgba(19, 32, 35, 0.2);
+  animation: rise 0.45s ease;
+}
+
+.lang-header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.lang-header h2{
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.lang-header span{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.lang-text{
+  display: grid;
+  gap: 10px;
+  padding: 18px 16px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--border);
+}
+
+.lang-text h1{
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.lang-buttons{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.lang-buttons button{
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.lang-buttons button:hover{
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: 0 10px 22px rgba(19, 32, 35, 0.16);
+}
