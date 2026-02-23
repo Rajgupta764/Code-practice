@@ -20,7 +20,7 @@ const Form = () => {
     <form onSubmit={handle}  className='form'>
         <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}  placeholder='Enter your name'/>
         <input type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder='Enter your email'/>
-        <input type="password" value={pass} placeholder='Enter your password '/>
+        <input type="password" placeholder='Enter your password '/>
         <button onClick={handlesubmit}>submit</button>
 
     </form>

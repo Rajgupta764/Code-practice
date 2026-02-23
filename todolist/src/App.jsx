@@ -3,12 +3,15 @@ import Todo from './list/todo'
 import Password from './password/Password'
 import Theme from './theme/Theme'
 
+
 const App = () => {
   return (
     <div>
-      <Theme/>
+      {/* <Theme/>
+    
+      <Password/> */}
       <Todo/>
-      <Password/>
+
     </div>
   )
 }

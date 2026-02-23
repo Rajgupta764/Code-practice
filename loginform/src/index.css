@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #0b1320;
+  background: radial-gradient(1200px 800px at 10% 10%, #ffefc7 0%, rgba(255, 239, 199, 0) 45%),
+    radial-gradient(900px 700px at 90% 20%, #cde8ff 0%, rgba(205, 232, 255, 0) 50%),
+    linear-gradient(135deg, #0b1d39 0%, #1e2f57 50%, #12223f 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}

@@ -1,18 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './style.css'
 
 const Todo = () => {
 
     const [input,setInput]=useState('');
-    const [list,setList]=useState([]);
+    const [list,setList]=useState(()=>{
+        try {
+            const savedList=localStorage.getItem('list');
+            return savedList && savedList !== 'undefined' ? JSON.parse(savedList) : [];
+        } catch (error) {
+            console.error('Error parsing localStorage:', error);
+            localStorage.removeItem('list');
+            return [];
+        }
+    });
 
     const handle=()=>{
         setList([...list,input]);
         setInput('');
     }
 
+    // save data to local storage whenever list changes
+    useEffect(() => {
+        localStorage.setItem('list',JSON.stringify(list));
+    }, [list]);
+
     const del=()=>{
-        setList([''])
+        setList([])
     }
 
   return (
